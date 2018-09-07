@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{float}
+\usepackage{type1cm} 
+\usepackage{enumitem}
+\usepackage{vmargin}
+\setpapersize{USletter}
+\setmarginsrb{1in}{.6in}{1in}{.6in}{0ex}{0ex}{0ex}{0ex}
+\usepackage{color,hyperref}
+\setlength{\parskip}{0.4\baselineskip}
+\setlength{\parindent}{0mm}\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage[utf8]{inputenc}
+\begin{document}
+
+	{\large \bf STAT 5376 \hfill Homework 02 \hfill Ramesh A. Kesawan}
+	\subsubsection*{Problem 03:}
+	\begin{enumerate}[label=(\alph*)]
+	\item  The 95\% confidence interval is given by,
+	\[\bar{x} \pm z_{\alpha/2}\frac{\sigma}{n} \]
+		
+	where $ \bar{x} $ is sample mean and $ \sigma $ standard deviation of log returns.\\
+	For \textbf{SBUX} stock: The $ \bar{x}=0.0005 $ and $ \sigma=0.0211$. \\These values implies the 95\% confidence interval of the log returns of Starbucks stock is
+	\[(0.0005576612,0.0005943098)\]
+	\item To test $ H_0 : m_3 = 0 $ versus $ H_a : m_3 \neq 0 $, where $ m_3 $ denotes the skewness of the log return, we used the fact $\hat{S}(x) \sim N(0,\frac{6}{T})$, where  $\hat{S}(x)$ is sample skewness and $T$ is sample size. \\
+	The test statistic is $\frac{\hat{S}(x)}{\sqrt{\frac{6}{T}}}=5.869595$ and $ z_{\alpha/2}=1.96$. From these the data shows enough evidence to reject the null hypothesis of symmetry.
+	
+	\item To test $ H_0 : K = 3 $ versus $ H_a : K \neq 3 $, where $ K $ denotes the kurtosis of the log return, we used the fact $\hat{K}(x)-3 \sim N(0,\frac{24}{T})$, where  $\hat{K}(x)$ is sample kurtosis and $T$ is sample size. \\
+	The test statistic is $\frac{\hat{K}(x)-3}{\sqrt{\frac{24}{T}}}=57.4277$ and $ z_{\alpha/2}=1.96$. From these the data shows enough evidence to reject the null hypothesis of tail thickness.
+	
+	\end{enumerate}
+
+\subsubsection*{Problem 04 :}
+\begin{enumerate}[label=(\alph*)]
+	\item  The hypothesis of testing the
+	log return of  S\&P composite index is symmetric with respect to its mean;\\
+	$ H_0 : m_3 = \mu $ versus $ H_a : m_3 \neq \mu $, where $ m_3,\mu $ denotes the skewness and mean of the log return respectively,\\
+	We used the fact $\hat{S}(x)-\bar{x} \sim N(0,\frac{6}{T})$, where  $\hat{S}(x)$ is sample skewness, $\bar{x}$ is sample mean and $T$ is sample size.\\
+	The test statistic is $\frac{\hat{S}(x)-\bar{x} }{\sqrt{\frac{6}{T}}}=-6.11373$ and $ -z_{\alpha/2}=-1.96$. From these the data shows enough evidence to reject the null hypothesis of symmetry.
+	
+	\item  The hypothesis of testing the excess
+	kurtosis of the log return of  S\&P composite index returns is zero;\\
+	$ H_0 : K = 0 $ versus $ H_a : K \neq 0 $, where $ K $ denotes the excess kurtosis of the log return,\\
+	We used the fact $\hat{K}(x) \sim N(0,\frac{24}{T})$, where  $\hat{K}(x)$ is sample excess kurtosis and $T$ is sample size. \\
+	The test statistic is $\frac{\hat{K}(x)}{\sqrt{\frac{24}{T}}}=92.27383$ and $ z_{\alpha/2}=1.96$. From these the data shows enough evidence to reject the null hypothesis of tail thickness.
+	
+	\item  The 95\% confidence interval is given by,
+	\[\bar{x} \pm z_{\alpha/2}\frac{\sigma}{n} \]
+	
+	where $ \bar{x} $ is sample mean and $ \sigma $ standard deviation of log returns.\\
+	For \textbf{S\&P} stock: The $ \bar{x}=0.0002 $ and $ \sigma=0.0136$. \\These values implies the 95\% confidence interval of the log returns of Starbucks stock is
+	\[(0.0001494686,0.0001730592)\]
+\end{enumerate}
+\end{document}
